@@ -4,7 +4,7 @@ Build a React Native App that lets users book seats on a bus.
 
 ## 📥 Download APK
 
-[DOWNLOAD APPLICATION APK](https://drive.google.com/file/d/1UQmU6tG3L6k4UObRSDoCA8R4brhbv7GO/view?usp=drive_link)
+[DOWNLOAD APPLICATION APK](https://drive.google.com/file/d/1UQmU6tG3L6k4UObRSDoCA8R4brhbv7GO/view?usp=sharing)
 
 ## 🔗 GitHub Repo
 
@@ -53,7 +53,7 @@ Build a React Native App that lets users book seats on a bus.
 
 ```bash
 git clone https://github.com/Areandra/BusSeatBooking.git
-cd your-repo-name
+cd BusSeatBooking
 npm install
 
 # iOS
