@@ -23,7 +23,7 @@ function SeatComponent({
   disabled = false,
   isBooked = false,
 }: SeatComponentInterface) {
-  const thameColor = isBooked ? 'black' : isSelected ? 'blue' : 'grey';
+  const thameColor = isBooked ? '#464f56' : isSelected ? '#4fd880' : '#bec1c6';
 
   const style = StyleSheet.create({
     container: {
@@ -37,18 +37,22 @@ function SeatComponent({
     },
     seatNumberContainer: {
       alignSelf: 'stretch',
-      width: 40,
+      width: 38,
       alignItems: 'center',
-      backgroundColor: thameColor,
       borderStartStartRadius: 10,
       borderEndStartRadius: 10,
+      backgroundColor: 'transparent',
+      borderColor: thameColor,
+      borderWidth: 1.5,
       justifyContent: 'center',
       marginBottom: 0.5,
     },
     handStand: {
       height: 24,
       width: 8,
-      backgroundColor: thameColor,
+      backgroundColor: 'transparent',
+      borderColor: thameColor,
+      borderWidth: 1.5,
       borderRadius: 3,
       marginInline: 0.5,
     },
@@ -58,7 +62,9 @@ function SeatComponent({
       alignItems: 'flex-end',
     },
     seatBottom: {
-      backgroundColor: thameColor,
+      backgroundColor: 'transparent',
+      borderColor: thameColor,
+      borderWidth: 1.5,
       height: 11,
       width: 56,
       borderRadius: 4,
@@ -66,7 +72,7 @@ function SeatComponent({
     seatNumber: {
       fontSize: 20,
       fontWeight: 'bold',
-      color: 'white',
+      color: thameColor,
     },
   });
 

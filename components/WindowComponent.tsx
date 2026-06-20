@@ -9,7 +9,7 @@ const style = StyleSheet.create({
     alignSelf: 'stretch',
     width: 5,
     marginInline: -2,
-    backgroundColor: 'blue',
+    backgroundColor: '#36afd3',
     marginBlock: 4,
     borderRadius: 100,
   },

@@ -16,15 +16,15 @@ const style = StyleSheet.create({
     height: 40,
     borderRadius: '100%',
     borderWidth: 4,
-    borderColor: 'black',
+    borderColor: '#464f56',
     alignSelf: 'center',
     marginBottom: 8,
   },
-  horizontalStick: { width: 36, height: 4, backgroundColor: 'black' },
+  horizontalStick: { width: 36, height: 4, backgroundColor: '#464f56' },
   verticalStick: {
     flex: 1,
     width: 4,
-    backgroundColor: 'black',
+    backgroundColor: '#464f56',
     alignSelf: 'center',
   },
 });

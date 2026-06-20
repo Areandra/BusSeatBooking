@@ -8,6 +8,7 @@ function DriverSeatComponent() {
       <View style={style.container}>
         <SteeringWheelComponenet />
         <SeatComponent
+          isBooked={true}
           disabled={true}
           seatNumber=""
           isWindow={false}
