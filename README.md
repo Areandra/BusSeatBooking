@@ -1,97 +1,65 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Bus Seat Booking
 
-# Getting Started
+Build a React Native App that lets users book seats on a bus.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 📥 Download APK
 
-## Step 1: Start Metro
+[DOWNLOAD APPLICATION APK](https://drive.google.com/file/d/1UQmU6tG3L6k4UObRSDoCA8R4brhbv7GO/view?usp=drive_link)
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 🔗 GitHub Repo
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## https://github.com/Areandra/BusSeatBooking
 
-```sh
-# Using npm
-npm start
+## 🎯 Core Features (Required)
 
-# OR using Yarn
-yarn start
-```
+- [x] Radio button to choose:
+  - **Regular Class** → 20 seats → 10 seats left + 10 seats right (1:1 square seat layout)
+  - **Express Class** → 12 seats → 6 seats left + 6 seats right (2:1 rectangle seat layout)
+- [x] When a bus type is selected, the correct seat grid layout renders dynamically
+- [x] Users can tap seats to select or unselect → selected seats are highlighted visually
+- [x] Live total price shown based on selection:
+  - Regular at first or last column (near the window) = Rp 150.000 / seat
+  - Regular = Rp 100.000 / seat
+  - Express at first or last column (near the window) = Rp 200.000 / seat
+  - Express = Rp 150.000 / seat
+- [x] Maximum selection is 5 seats → user can only book 5 seats at a time
+- [x] "Confirm Booking" button → when pressed, selected seats become permanently unavailable (disabled)
+- [x] Booked seats are stored locally using AsyncStorage (no backend needed)
+- [x] Seat reset rule: seat availability resets automatically ONLY when ALL seats for that bus type are fully booked
+  - (Example: all 20 Regular seats booked → reset Regular only. Express is independent.)
 
-## Step 2: Build and run your app
+## ⭐ Bonus Features (Optional)
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+- [x] Date picker on the seat selection screen (calendar form sheet)
+  - User must select a date before being able to select seats and hit "Confirm"
+  - Selected booking date is tied to the order — only seats on that respective date are permanently disabled if already booked
+  - Seats only reset when all seats are fully booked on that respective date
+- [x] Simple sales history UI (list screen):
+  - Which seats were booked
+  - The booking date (departure date)
+  - Total revenue generated so far
+- [x] Date filter on Sales History UI → when selected, only shows history on that respective date
 
-### Android
+## ✅ Technical Rules
 
-```sh
-# Using npm
+- [x] React Native only
+- [x] Utilizes React Native lifecycle (useEffect, useFocusEffect, useCallback)
+- [x] No backend required — local data only (AsyncStorage)
+- [x] UI is friendly
+
+---
+
+## 💻 Running the Project Locally
+
+```bash
+git clone https://github.com/Areandra/BusSeatBooking.git
+cd your-repo-name
+npm install
+
+# iOS
+cd ios && pod install && cd ..
+
+# Run
 npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
 npm run ios
-
-# OR using Yarn
-yarn ios
 ```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.

@@ -2,11 +2,9 @@ import {
   FlatList,
   StyleSheet,
   Text,
-  TouchableOpacity,
   View,
 } from 'react-native';
 import { SeatComponentInterface } from './SeatComponent';
-import LinearGradient from 'react-native-linear-gradient';
 import Button from './Button';
 
 interface LiveTotalPriceInterface {

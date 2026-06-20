@@ -9,6 +9,7 @@ import { useCallback, useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useBookingDate } from '../context/BookingContext';
 import { useFocusEffect } from '@react-navigation/native';
+import TotalRevenue from '../components/TotalRevenue';
 
 interface Ticket {
   id: string;
@@ -141,6 +142,22 @@ function BookingHistoryScreen({ navigation }: any) {
               </Text>
             </View>
           )}
+        />
+      </View>
+      <View
+        style={{
+          gap: 8,
+          justifyContent: 'flex-end',
+        }}
+      >
+        <TotalRevenue
+          totalRevenue={
+            selectedDate
+              ? tickets
+                  .filter(item => item.departureDate === selectedDate)
+                  .reduce((sum, item) => sum + item.totalPrice, 0)
+              : tickets.reduce((sum, item) => sum + item.totalPrice, 0)
+          }
         />
       </View>
     </>
